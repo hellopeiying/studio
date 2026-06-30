@@ -16,11 +16,9 @@ const CONTENT = {
     name:       "Peiying Loh",
     role:       "Co-Founder & Data Storyteller",
     location:   "Singapore & Uppsala, Sweden",
-    email:      "hello@peiyingloh.com",
+    email:      "x",
     linkedin:   "https://linkedin.com/in/peiyingloh",
-    twitter:    "https://twitter.com",
     studio:     "https://kontinentalist.com",
-    year:       "2025",
   },
 
   /* ── ABOUT ──────────────────────────────────── */
@@ -33,7 +31,7 @@ const CONTENT = {
       `I'm passionate about telling stories with <span class="ay">history</span>, exploring cultural contexts, and helping others understand the systems that societies inherit and continue.`,
     ],
     // Replace null with your photo path, e.g. "images/peiying.jpg"
-    photo: null,
+    photo: "images/peiying.jpg",
   },
 
   /* ── WORK ───────────────────────────────────── */
@@ -43,10 +41,10 @@ const CONTENT = {
     // First previewCount items show by default; the rest expand on click
     previewCount: 3,
     roles: [
-      { title: "Head & Co-Founder",              org: "Kontinentalist",               period: "2017–present" },
+      { title: "Co-Founder",                      org: "Kontinentalist",               period: "2017–present" },
       { title: "Board Member",                    org: "Society for News Design",       period: "Current"      },
-      { title: "MSc, Data Inequality & Society",  org: "University of Edinburgh",       period: "2023–2024"    },
-      { title: "Curatorial Department",           org: "Asian Civilisations Museum",    period: "3 years"      },
+      { title: "MSc, Data, Inequality & Society", org: "University of Edinburgh",       period: "2023–2024"    },
+      { title: "Curatorial Research Assistant",   org: "Asian Civilisations Museum",    period: "3 years"      },
       // Add more roles here:
       // { title: "", org: "", period: "" },
     ],
@@ -88,7 +86,7 @@ const CONTENT = {
         title:       "Rubber, Race & Colonial Exploitation",
         tags:        ["data", "history", "colonialism"],
         year:        "2024",
-        description: "How the rubber industry in Singapore and Malaysia was built on colonial extraction — a story of land, labour, and racial hierarchy that shaped the modern economy.",
+        description: "How the rubber industry in Singapore and Malaysia was built on colonial extraction: a story of land, labour, and racial hierarchy that shaped the modern economy.",
         imageSrc:    null,  // e.g. "images/rubber-race.jpg"
         accentColor: "#4BA840",
       },
@@ -97,7 +95,7 @@ const CONTENT = {
         title:       "A River Drained",
         tags:        ["data", "environment", "food systems"],
         year:        "2020",
-        description: "Food security along the Mekong River — how damming, climate change, and geopolitics are threatening fish stocks and the livelihoods of millions.",
+        description: "Food security along the Mekong River: how damming, climate change, and geopolitics are threatening fish stocks and the livelihoods of millions.",
         imageSrc:    null,
         accentColor: "#F2D94E",
       },
@@ -106,7 +104,7 @@ const CONTENT = {
         title:       "Pasar",
         tags:        ["culture", "singapore", "society"],
         year:        "2021",
-        description: "What makes Singapore's wet markets unique — their history, social role, and why they persist in a city defined by modernity.",
+        description: "What makes Singapore's wet markets unique: their history, social role, and why they persist in a city defined by modernity.",
         imageSrc:    null,
         accentColor: "#111111",
       },
@@ -132,7 +130,6 @@ const CONTENT = {
       { label: "Email",       value: "hello@peiyingloh.com", href: "mailto:hello@peiyingloh.com",       external: false },
       { label: "LinkedIn",    value: "Peiying Loh",          href: "https://linkedin.com/in/peiyingloh", external: true  },
       { label: "Studio",      value: "Kontinentalist",       href: "https://kontinentalist.com",          external: true  },
-      { label: "Twitter / X", value: "@peiying",             href: "https://twitter.com",                 external: true  },
     ],
   },
 
