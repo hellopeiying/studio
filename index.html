@@ -44,7 +44,7 @@ nav {
 }
 .nav-inner { display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; max-width: 1100px; position: relative; }
 .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; }
-.nav-links a { font-size: 10px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #111; text-decoration: none; padding: 0.45rem 0.75rem; border-radius: 2px; transition: background 0.15s; display: block; }
+.nav-links a { font-size: 15px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #111; text-decoration: none; padding: 0.45rem 0.75rem; border-radius: 2px; transition: background 0.15s; display: block; }
 .nav-links a:hover { background: var(--yellow); }
 .nav-sep { width: 3px; height: 3px; border-radius: 50%; background: #CCC; flex-shrink: 0; }
 
@@ -71,7 +71,7 @@ nav {
 .split-visual { position: sticky; top: var(--nav-h); height: calc(100vh - var(--nav-h)); display: flex; align-items: center; justify-content: center; overflow: hidden; border-left: 0.5px solid var(--rule); background: #fff; }
 
 /* Chapter label */
-.chapter-label { font-size: 10px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: #111; }
+.chapter-label { font-size: 15px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #111; }
 
 /* Big prose */
 .prose-block { font-family: var(--serif); font-weight: 700; font-size: clamp(1.75rem, 3.5vw, 2.8rem); line-height: 1.2; color: #111; }
@@ -82,7 +82,7 @@ nav {
 .sub-text { font-size: 13px; color: #111; letter-spacing: 0.01em; }
 
 /* Section heading (smaller prose) */
-.section-heading { font-family: var(--serif); font-weight: 700; font-size: clamp(1.2rem, 2.5vw, 1.65rem); color: #111; }
+.section-heading { font-family: var(--serif); font-weight: 700; font-size: clamp(1.6rem, 2.5vw, 1.65rem); color: #111; }
 
 /* ── WORK ENTRIES ── */
 .work-list { display: flex; flex-direction: column; margin-top: 0.5rem; }
@@ -230,6 +230,8 @@ footer { border-top: 0.5px solid var(--rule); padding: 1.25rem var(--pad); displ
       <li class="nav-sep"></li>
       <li><a href="#work">Work</a></li>
       <li class="nav-sep"></li>
+      <li><a href="#awards">Awards</a></li>
+      <li class="nav-sep"></li>
       <li><a href="#features">Features</a></li>
       <li class="nav-sep"></li>
       <li><a href="#studio">Studio</a></li>
@@ -244,6 +246,7 @@ footer { border-top: 0.5px solid var(--rule); padding: 1.25rem var(--pad); displ
 <div class="nav-drawer" id="navDrawer" aria-hidden="true">
   <a href="#about">About</a>
   <a href="#work">Work</a>
+  <a href="#awards">Awards</a>
   <a href="#features">Features</a>
   <a href="#studio">Studio</a>
   <a href="#contact">Contact</a>
@@ -294,6 +297,42 @@ footer { border-top: 0.5px solid var(--rule); padding: 1.25rem var(--pad); displ
             <ellipse cx="0" cy="-32" rx="10" ry="22" fill="#F2D94E" transform="rotate(280)"/>
             <ellipse cx="0" cy="-32" rx="10" ry="22" fill="#F2D94E" transform="rotate(320)"/>
             <circle cx="0" cy="0" r="14" fill="#111"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── AWARDS ───────────────────────────── -->
+<section class="chapter-section" id="awards">
+  <div class="split">
+    <div class="split-text reveal">
+      <span class="chapter-label">Awards</span>
+      <h2 class="section-heading" id="awards-heading"></h2>
+      <div class="work-list" id="awards-preview"></div>
+      <div class="expandable-extra" id="awards-extra">
+        <div class="work-list" id="awards-more-list"></div>
+      </div>
+      <button class="expand-btn" id="awards-expand-btn" style="display:none;" aria-expanded="false">
+        <span class="btn-label">See all awards</span>
+        <span class="btn-arrow">↓</span>
+      </button>
+    </div>
+    <div class="split-visual">
+      <div class="daisy-visual" aria-hidden="true">
+        <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g transform="translate(70,70)">
+            <ellipse cx="0" cy="-32" rx="10" ry="22" fill="#111" transform="rotate(0)"/>
+            <ellipse cx="0" cy="-32" rx="10" ry="22" fill="#111" transform="rotate(40)"/>
+            <ellipse cx="0" cy="-32" rx="10" ry="22" fill="#111" transform="rotate(80)"/>
+            <ellipse cx="0" cy="-32" rx="10" ry="22" fill="#111" transform="rotate(120)"/>
+            <ellipse cx="0" cy="-32" rx="10" ry="22" fill="#111" transform="rotate(160)"/>
+            <ellipse cx="0" cy="-32" rx="10" ry="22" fill="#111" transform="rotate(200)"/>
+            <ellipse cx="0" cy="-32" rx="10" ry="22" fill="#111" transform="rotate(240)"/>
+            <ellipse cx="0" cy="-32" rx="10" ry="22" fill="#111" transform="rotate(280)"/>
+            <ellipse cx="0" cy="-32" rx="10" ry="22" fill="#111" transform="rotate(320)"/>
+            <circle cx="0" cy="0" r="14" fill="#F2D94E"/>
           </g>
         </svg>
       </div>
@@ -391,6 +430,17 @@ if (wMore.length) {
   $('work-expand-btn').querySelector('.btn-label').textContent = `See all ${C.work.roles.length} roles`;
 }
 
+// Awards
+$('awards-heading').innerHTML = C.awards.heading;
+const aPrev = C.awards.items.slice(0, C.awards.previewCount);
+const aMore = C.awards.items.slice(C.awards.previewCount);
+$('awards-preview').innerHTML = aPrev.map(awardEntryHTML).join('');
+if (aMore.length) {
+  $('awards-more-list').innerHTML = aMore.map(awardEntryHTML).join('');
+  $('awards-expand-btn').style.display = 'inline-flex';
+  $('awards-expand-btn').querySelector('.btn-label').textContent = `See all ${C.awards.items.length} awards`;
+}
+
 // Features
 $('features-heading').innerHTML = C.features.heading;
 if (C.features.photo) {
@@ -433,6 +483,20 @@ function workEntryHTML(r) {
   </div>`;
 }
 
+/* ── Award entry HTML ── */
+function awardEntryHTML(a) {
+  const titleContent = a.url
+    ? `<a href="${a.url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">${a.title}</a>`
+    : a.title;
+  return `<div class="work-entry">
+    <div class="we-left">
+      <span class="we-title">${titleContent}</span>
+      <span class="we-org">${a.org}${a.project ? ' &mdash; <em>' + a.project + '</em>' : ''}</span>
+    </div>
+    <span class="we-period">${a.year}</span>
+  </div>`;
+}
+
 /* ── Feature entry HTML ── */
 function featureEntryHTML(f) {
   const badgeClass = { podcast:'fb-podcast', article:'fb-article', interview:'fb-interview', newsletter:'fb-newsletter', talk:'fb-talk' }[f.type] || 'fb-article';
@@ -458,6 +522,7 @@ function setupExpandable(btnId, extraId) {
   });
 }
 setupExpandable('work-expand-btn', 'work-extra');
+setupExpandable('awards-expand-btn', 'awards-extra');
 setupExpandable('features-expand-btn', 'features-extra');
 
 /* ── Carousel ── */
@@ -577,7 +642,7 @@ drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
 }));
 
 /* ── Active nav on scroll ── */
-const sections = ['about','work','features','studio','contact'];
+const sections = ['about','work','awards','features','studio','contact'];
 const navLinks = document.querySelectorAll('.nav-links a');
 const io = new IntersectionObserver(entries => {
   entries.forEach(e => {
