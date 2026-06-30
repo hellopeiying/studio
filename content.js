@@ -30,8 +30,8 @@ const CONTENT = {
       `As a <span class="ag">data storyteller</span> and visualisation practitioner, I transform research into visually stunning, interactive essays. I work with organisations of all kinds to help them communicate better with the public.`,
       `I'm passionate about telling stories with <span class="ay">history</span>, exploring cultural contexts, and helping others understand the systems that societies inherit and continue.`,
     ],
-    // Replace null with your photo path, e.g. "images/peiying.jpg"
-    photo: "images/peiying.jpg",
+    // Replace null with your photo path, e.g. "peiying.jpg"
+    photo: "peiying.jpg",
   },
 
   /* ── WORK ───────────────────────────────────── */
