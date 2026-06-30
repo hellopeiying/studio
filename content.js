@@ -26,7 +26,7 @@ const CONTENT = {
     chapter: "About",
     // Each string = one paragraph. Use <span class="ag"> for green, <span class="ay"> for yellow highlight.
     prose: [
-      `I co-founded <span class="ag">Kontinentalist</span>, an award-winning data-driven editorial studio focused on Asian stories.`,
+      `I co-founded <span class="ag"><a href="https://kontinentalist.com" target="_blank" rel="noopener">Kontinentalist</a></span>, an award-winning data-driven editorial studio focused on Asian stories.`,
       `As a <span class="ag">data storyteller</span> and visualisation practitioner, I work with organisations of all kinds to help them communicate better with the public.`,
       `I'm passionate about telling stories with <span class="ay">history</span>, exploring cultural contexts, and helping others understand the systems that societies inherit and continue.`,
     ],
