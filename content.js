@@ -26,9 +26,9 @@ const CONTENT = {
     chapter: "About",
     // Each string = one paragraph. Use <span class="ag"> for green, <span class="ay"> for yellow highlight.
     prose: [
-      `I co-founded <span class="ag">Kontinentalist</span>, an award-winning data-driven editorial studio focused on Asian stories, leading its overall development and editorial direction.`,
-      `As a <span class="ag">data storyteller</span> and visualisation practitioner, I design and deliver Kontinentalist's flagship data storytelling workshops, and work with organisations of all kinds to help them communicate better with the public.`,
-      `Before this, I spent over two years in the curatorial department at the Asian Civilisations Museum. I'm passionate about telling stories with <span class="ay">history</span>, exploring cultural contexts, and helping others understand the systems that societies inherit and continue.`,
+      `I co-founded <span class="ag">Kontinentalist</span>, an award-winning data-driven editorial studio focused on Asian stories.`,
+      `As a <span class="ag">data storyteller</span> and visualisation practitioner, I work with organisations of all kinds to help them communicate better with the public.`,
+      `I'm passionate about telling stories with <span class="ay">history</span>, exploring cultural contexts, and helping others understand the systems that societies inherit and continue.`,
     ],
     // Replace null with your photo path, e.g. "images/peiying.jpg"
     photo: "peiying.jpg",
@@ -41,14 +41,14 @@ const CONTENT = {
     // First previewCount items show by default; the rest expand on click
     previewCount: 4,
     roles: [
-      { title: "Head & Co-Founder",                          org: "Kontinentalist",                                period: "Mar 2017–present" },
+      { title: "Co-Founder",                                  org: "Kontinentalist",                                period: "Mar 2017–present" },
       { title: "Board Member",                                org: "Society for News Design",                      period: "2024–present"      },
-      { title: "Curatorial Research Assistant",               org: "Asian Civilisations Museum",                    period: "Oct 2014–Jan 2017" },
       { title: "MSc Data, Inequality & Society",             org: "University of Edinburgh · Distinction · Chevening Scholar", period: "2024" },
-      { title: "Judge",                                       org: "Information is Beautiful Awards",               period: "2023, 2024"               },
+      { title: "Judge",                                       org: "Information is Beautiful Awards",               period: "2023, 2024"       },
       { title: "Selected Participant",                        org: "Google News Initiative, Asia Pacific Product Lab", period: "2022"            },
       { title: "Singapore Representative",                    org: "IATSS Forum Leadership Programme, 62nd batch",  period: "Sep–Nov 2019"      },
-      { title: "BA (Hons), History & European Studies",       org: "National University of Singapore · Second Class Upper", period: "2010–2014" },
+      { title: "Curatorial Research Assistant",               org: "Asian Civilisations Museum",                    period: "Oct 2014–Jan 2017" },
+      { title: "BA (Hons), History & European Studies",       org: "National University of Singapore | Second Class Upper", period: "2010–2014" },
       // Add more roles here:
       // { title: "", org: "", period: "" },
     ],
@@ -75,6 +75,7 @@ const CONTENT = {
       // Add more awards here:
       // { title: "", org: "", year: "", project: "", url: "" },
     ],
+        photo: "peiying_3.jpg",
   },
 
   
@@ -92,6 +93,7 @@ const CONTENT = {
       { type: "talk",      title: "Threading Uncertainty: Co-Creating a Participatory Data Experience", publisher: "Workshop with Shirley Wu", year: "2026", url: "" },
  
       // ── 2025 ──
+      { type: "article", title: "Rejecting Colonial Practices in Data Storytelling", publisher: "IEEE VISAP", year: "2025", url: "https://ieeexplore.ieee.org/document/11298987" },
       { type: "talk",      title: "Rejecting colonial practices in data storytelling",            publisher: "IEEE Visualizing Arts Programme (VISAP)",            year: "2025", url: "https://www.youtube.com/watch?v=NZ0Wwrqv6fA" },
       { type: "talk",      title: "Telling data stories with care",                                publisher: "Visualizing for Hope, On Data and Design",           year: "2025", url: "https://youtu.be/gr7aZXolH0c" },
       { type: "article",   title: "Asia Focus: Why data journalism in newsrooms needs more evidence", publisher: "Global Investigative Journalism Network (GIJN)",  year: "2025", url: "https://gijn.org/stories/asia-focus-data-journalism-newsrooms-evidence/" },
@@ -130,49 +132,59 @@ const CONTENT = {
 
   /* ── STUDIO ─────────────────────────────────── */
   studio: {
-    chapter: "Studio",
+    chapter: "My Works",
     // Each string = one paragraph
     prose: [
       `At the intersection of <span class="ag">data</span>, <span class="ay">feminism</span>, craft &amp; history.`,
-      `Making things with hands and head, thinking through how we represent knowledge, who gets to tell stories, and what it means to work across the digital and the physical.`,
+      `Processing through knowledge and stories through tactile and slow experiences, and exploring what it means to work across digital and the physical.`,
     ],
     // Carousel projects. Add your own images by setting imageSrc.
     // Each project links to project.html?id=YOUR_ID
     projects: [
       {
+        id:          "museum-orang-laut",
+        title:       "Lawan Lupa (Fight the Forgetting) Orang Laut and Modes of Memory",
+        tags:        ["data", "history", "decolonisation", "indigenity", "memory"],
+        year:        "2024",
+        description: "A two-fold epistemic conversation around Singapore’s Orang Laut and their representations in “modes of memory” that is explored through a knowledge product and this supporting paper.",
+        imageSrc:    "lawanlupa.jpg",  // e.g. "images/rubber-race.jpg"
+        accentColor: "#F2D94E",
+        longDescription: "A group of Indigenous seafarers in the seas around Singapore, the Orang Laut’s presence has been erased from the nation-state’s collective memory and landscapes, and described as “forgotten”. In recent years, a rise in Indigenous activism has brought their narratives to greater awareness. This project and study adopts an interdisciplinary and decolonial approach, blending historical and narrative critique, qualitative text and data analysis, and participatory methods. I unpack how coloniality is constructed in Singapore through epistemic, material, and symbolic dimensions through an analysis of the state’s mechanisms of erasure in narratives and institutionalised memories. I argue that the Orang Laut are not forgotten, but erased, through these knowledge and narrative instruments. As a response and means to disrupt coloniality, my knowledge product draws on collective knowledge and wisdom of Orang Laut communities, and collaborates with them to offer a counter-mapping memory repository of inherently different construction.",
+      },
+      {
         id:          "rubber-race",
         title:       "Rubber, Race & Colonial Exploitation",
         tags:        ["data", "history", "colonialism"],
-        year:        "2024",
+        year:        "2023",
         description: "How the rubber industry in Singapore and Malaysia was built on colonial extraction: a story of land, labour, and racial hierarchy that shaped the modern economy.",
-        imageSrc:    null,  // e.g. "images/rubber-race.jpg"
+        imageSrc:    "rubber.jpg",  // e.g. "images/rubber-race.jpg"
         accentColor: "#4BA840",
       },
       {
         id:          "mekong",
-        title:       "A River Drained",
-        tags:        ["data", "environment", "food systems"],
+        title:       "A River Drained: Fish, Rice, and Food Security in the Mekong",
+        tags:        ["data", "environment", "food systems", "climate change"],
         year:        "2020",
         description: "Food security along the Mekong River: how damming, climate change, and geopolitics are threatening fish stocks and the livelihoods of millions.",
-        imageSrc:    null,
+        imageSrc:    "mekong.jpg",
         accentColor: "#F2D94E",
       },
       {
         id:          "pasar",
-        title:       "Pasar",
-        tags:        ["culture", "singapore", "society"],
+        title:       "Pasar: What makes Singapore's wet markets unique?",
+        tags:        ["culture", "singapore", "society","heritage"],
         year:        "2021",
         description: "What makes Singapore's wet markets unique: their history, social role, and why they persist in a city defined by modernity.",
-        imageSrc:    null,
+        imageSrc:    "pasar.jpg",
         accentColor: "#111111",
       },
       {
         id:          "housing",
-        title:       "The Singapore Dream",
+        title:       "How attainable is the Singapore dream? An investigation into public housing",
         tags:        ["housing", "inequality", "data"],
         year:        "2022",
         description: "An investigation into public housing and the gap between the dream and the reality for different communities.",
-        imageSrc:    null,
+        imageSrc:    "housing.jpg",
         accentColor: "#4BA840",
       },
       // Add more projects here:
@@ -183,9 +195,8 @@ const CONTENT = {
   /* ── CONTACT ─────────────────────────────────── */
   contact: {
     chapter: "Contact",
-    prose: `I'm open to collaborations, speaking engagements, consultancy, and conversations about <span class="ag">data</span>, <span class="ay">history</span>, and Asia.`,
+    prose: `I'm open to collaborations, speaking engagements, consultancy, workshops, and conversations about <span class="ag">data</span>, decolonisation, <span class="ay">history</span>, and Asia.`,
     links: [
-      { label: "Email",       value: "x, href: "mailto:x",      external: false },
       { label: "LinkedIn",    value: "Peiying Loh",          href: "https://linkedin.com/in/peiyingloh", external: true  },
       { label: "Studio",      value: "Kontinentalist",       href: "https://kontinentalist.com",          external: true  },
     ],

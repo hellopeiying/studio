@@ -104,7 +104,7 @@ footer { border-top: 0.5px solid var(--rule); padding: 1.25rem var(--pad); displ
 <body>
 
 <nav>
-  <a href="index.html#studio" class="nav-back">← Back</a>
+  <a href="index.html#studio" class="nav-back">Back</a>
   <a href="index.html" class="nav-home">Peiying Loh</a>
 </nav>
 
@@ -190,7 +190,7 @@ if (!project) {
         <div class="project-body-section">
           <h2>About this project</h2>
           <p>${project.description}</p>
-          <p>Add your extended project description here in <strong>content.js</strong> — expand the project object to include a <code>longDescription</code> field, then reference it here.</p>
+          <p>${project.longDescription}</p>
         </div>
       </div>
 
